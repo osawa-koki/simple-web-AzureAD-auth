@@ -48,9 +48,27 @@ az account show --query id --output tsv
 ```
 
 これらを`terraform.tfvars`に記載します。  
-また、このJSON全体を`AZURE_CREDENTIALS`という名前でGitHubシークレットに設定します。  
 
 `terraform.tfvars`のテンプレートは`terraform.tfvars.example`を参照してください。  
+
+---
+
+次に以下のコマンドを実行します。  
+
+```shell
+az ad sp create-for-rbac --name "★プリンシパル名★" --role contributor --scopes /subscriptions/★サブスクリプションID★ --sdk-auth
+```
+
+`--sdk-auth`をつけることで、`az login`でログインする際に使用するJSONが出力されます。  
+これは`Option '--sdk-auth' has been deprecated and will be removed in a future release.`という警告が出ますが、今回はこのまま使用します。  
+調べても`--sdk-auth`を使わない方法が見つからなかったので、このまま使用します。  
+
+[参考](https://github.com/Azure/actions-workflow-samples/blob/master/assets/create-secrets-for-GitHub-workflows.md)  
+
+クライアントID・クライアントシークレット・サブスクリプションID・テナントIDもここから取得可能ですが、非推奨ということですので、使用していません。  
+二度手間になってしまいますが、、、  
+
+このJSON全体を`AZURE_CREDENTIALS`という名前でGitHubシークレットに設定します。  
 
 ## 開発環境の構築
 

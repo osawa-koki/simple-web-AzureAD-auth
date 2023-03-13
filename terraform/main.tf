@@ -8,7 +8,7 @@ terraform {
   }
   backend "azurerm" {
     resource_group_name  = "general"
-    key                  = "simple-web-azuread-auth.tfstate"
+    key                  = "terraform.tfstate"
   }
 }
 
