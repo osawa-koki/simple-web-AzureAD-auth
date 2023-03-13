@@ -29,7 +29,7 @@ az login
 [参考](https://github.com/marketplace/actions/azure-cli-action#configure-azure-credentials-as-github-secret)  
 
 ```shell
-az ad sp create-for-rbac --name "★プリンシパル名★"
+az ad sp create-for-rbac --name "★プリンシパル名★" --role contributor --scopes /subscriptions/★サブスクリプションID★
 ```
 
 これで出力されたJSONの中から以下の値を取得します。  
