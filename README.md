@@ -92,3 +92,4 @@ yarn dev
 ## 参考文献
 
 - [GitHub Actionsを使用した継続的デリバリー](https://learn.microsoft.com/ja-jp/azure/azure-functions/functions-how-to-github-actions?tabs=dotnet)
+- [チュートリアル: 認証コード フローを使用して、ユーザーをサインインさせて React シングルページ アプリ (SPA) から Microsoft Graph API を呼び出す](https://learn.microsoft.com/ja-jp/azure/active-directory/develop/tutorial-v2-react)
