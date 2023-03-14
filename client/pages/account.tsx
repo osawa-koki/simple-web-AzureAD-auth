@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { useMsal } from "@azure/msal-react";
+import { AuthenticatedTemplate, UnauthenticatedTemplate, useMsal } from "@azure/msal-react";
 import { loginRequest } from "../MSAD";
 import { Button } from "react-bootstrap";
 import Layout from '../components/Layout';
@@ -28,8 +28,14 @@ export default function Login() {
 
   return (
     <Layout>
-      <Button variant="secondary" className="ml-auto" onClick={() => handleLogin("popup")}>Sign in using Popup</Button>
-      <Button variant="secondary" className="ml-auto" onClick={() => handleLogout("popup")}>Sign out using Popup</Button>
+      <AuthenticatedTemplate>
+        <p>You are signed in!</p>
+        <Button variant="secondary" className="ml-auto" onClick={() => handleLogout("popup")}>Sign out using Popup</Button>
+      </AuthenticatedTemplate>
+      <UnauthenticatedTemplate>
+         <p>You are not signed in! Please sign in.</p>
+        <Button variant="secondary" className="ml-auto" onClick={() => handleLogin("popup")}>Sign in using Popup</Button>
+      </UnauthenticatedTemplate>
     </Layout>
   );
 };
