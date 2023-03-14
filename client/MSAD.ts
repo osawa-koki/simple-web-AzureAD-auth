@@ -1,8 +1,8 @@
 
 export const msalConfig = {
   auth: {
-    clientId: process.env.NEXT_PUBLIC_CLIENT_ID, // This is the ONLY mandatory field that you need to supply.
-    authority: process.env.NEXT_PUBLIC_AUTHORITY, // This is a URL (e.g. https://login.microsoftonline.com/{your tenant ID})
+    clientId: process.env.NEXT_PUBLIC_MSAL_CLIENT_ID, // This is the ONLY mandatory field that you need to supply.
+    authority: process.env.NEXT_PUBLIC_MSAL_AUTHORITY, // This is a URL (e.g. https://login.microsoftonline.com/{your tenant ID})
     redirectUri: "http://localhost:3000",
   },
   cache: {
