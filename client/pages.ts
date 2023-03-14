@@ -14,6 +14,11 @@ const pages = [
     path: '/contact/',
     name: 'Contact',
   },
+  {
+    emoji: '🦈',
+    path: '/login/',
+    name: 'Login',
+  },
 ];
 
 export default pages;

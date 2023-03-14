@@ -24,6 +24,8 @@
     "prettify": "prettier --write ./**/*.{ts,js,json}"
   },
   "dependencies": {
+    "@azure/msal-browser": "^2.34.0",
+    "@azure/msal-react": "^1.5.4",
     "@types/bootstrap": "^5.2.6",
     "@types/react-bootstrap": "^0.32.32",
     "bootstrap": "^5.2.3",

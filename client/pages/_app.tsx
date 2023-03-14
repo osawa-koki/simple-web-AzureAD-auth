@@ -2,6 +2,11 @@ import React from 'react';
 import { AppProps } from 'next/app';
 import { useState } from 'react';
 
+import { PublicClientApplication } from "@azure/msal-browser";
+import { MsalProvider } from "@azure/msal-react";
+import { msalConfig } from "../MSAD";
+const msalInstance = new PublicClientApplication(msalConfig);
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import '../styles/styles.scss';
@@ -26,15 +31,17 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
-      <Head>
-        <meta charSet="utf-8" />
-        <title>{setting.title}</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <link rel="icon" type="image/png" href={`${setting.basePath}/favicon.ico`} />
-      </Head>
-      <DataContext.Provider value={{sharedData, setSharedData}}>
-        <Component {...pageProps} />
-      </DataContext.Provider>
+      <MsalProvider instance={msalInstance}>
+        <Head>
+          <meta charSet="utf-8" />
+          <title>{setting.title}</title>
+          <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+          <link rel="icon" type="image/png" href={`${setting.basePath}/favicon.ico`} />
+        </Head>
+        <DataContext.Provider value={{sharedData, setSharedData}}>
+          <Component {...pageProps} />
+        </DataContext.Provider>
+      </MsalProvider>
     </>
   );
 };
