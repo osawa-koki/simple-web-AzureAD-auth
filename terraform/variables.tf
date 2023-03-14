@@ -33,3 +33,8 @@ variable "tenant_id" {
   type        = string
   description = "The tenant ID"
 }
+
+variable "base_url" {
+  type        = string
+  description = "The base URL"
+}
