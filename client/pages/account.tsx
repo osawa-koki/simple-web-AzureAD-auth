@@ -7,7 +7,7 @@ import Layout from '../components/Layout';
 
 export default function Login() {
 
-  const { instance, accounts, inProgress } = useMsal();
+  const { instance, accounts } = useMsal();
   const [accessToken, setAccessToken] = useState(null);
 
   const name = accounts[0] && accounts[0].name;
@@ -54,7 +54,7 @@ export default function Login() {
         <h5 className="card-title">Welcome {name}</h5>
         <div>
           {accessToken ?
-            <p>Access Token Acquired!</p>
+            <p>Access Token Acquired! {accessToken}</p>
             :
             <Button variant="secondary" onClick={RequestAccessToken}>Request Access Token</Button>
           }
