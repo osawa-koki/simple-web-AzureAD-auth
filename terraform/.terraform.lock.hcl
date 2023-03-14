@@ -2,21 +2,21 @@
 # Manual edits may be lost in future updates.
 
 provider "registry.terraform.io/hashicorp/azuread" {
-  version = "2.36.0"
+  version     = "2.7.0"
+  constraints = "2.7.0"
   hashes = [
-    "h1:dAV5X3m2ieOOR0jYZDeydMHp51sWTpOiwidBZK04BTc=",
-    "zh:0eb7307cdcd250a2dc5af58774544e5a05295b01f3a15c13a0c57493fac4159b",
-    "zh:1c3e89cf19118fc07d7b04257251fc9897e722c16e0a0df7b07fcd261f8c12e7",
-    "zh:3e75a622c0728f9ac8c367055fea9b2be8864668af6458e4e41c32a77d359f82",
-    "zh:7155543c317a7bd7c71fa409a3a3ba4b5ecc94156856239dc2677aaaffb1364a",
-    "zh:75c69fa8fc29245fccc9c32266688c94d9369b6ad0c51f255aac031f3bbfa08f",
-    "zh:7aa91589fc3ee509b5607f59e9ce3ee7db3ffc3673b6429d53c9b5f751672700",
-    "zh:a95e5f3a18d787ea1e6e0842037a777e7e55dee4734935c0de1b2bb177a1ac8c",
-    "zh:ba801f8510cbc8abc3cd6a9531e30ce936a7749a6b8d290e03afe9da72e825a2",
-    "zh:c51ef07fbc8a3dbdcc44adfaa1d261fb85837c128e813fb4cec41a045d91aead",
-    "zh:dcabd9661b6c6be3af18245e36c40a1e5b28b640a00391815c1c0a5c8a78edbc",
-    "zh:e82a6eb86837131094c324e53837dd4f2fe30b91f85ec15dd02364c7f9c7bfa8",
-    "zh:ffc2e2ed2a56c6403f124c0a1b5c4b91eafa7dab872a2e164cc60c3af6b4458f",
+    "h1:F3BZEnpkKsJtmz7rxvREUE2CowCZIDvo6SGO5MGDX6E=",
+    "zh:2c13e14e5dfed964e87f97523c0650dad95ec3323a7b8a86ad295bbd1ffca3f7",
+    "zh:307677150207dcf4ba2f844f2a0d7cfe0ed9f7799ca7233df8eb1569aebe6073",
+    "zh:3556fca455f464c09d374dfd0eb0db5ecd0d9e44a6b92621f54fd4ce0a1f9343",
+    "zh:6b5f3c4b89bff1a5f0ad7caa2ee876761c767b4e70bb432be4844ba2afb0ef06",
+    "zh:6e62476d5f41d82d0037d4269fdf9fcdf5467dc59f43674ef7d6a5675b65e32c",
+    "zh:a1331d60ca62936a439c9973ddda68836fb6f4d8bed72bcdbd95abcc626e5443",
+    "zh:a24d4345e6da7160b4853ac8056abd328df9d80593be80f4d105e7ecabce331d",
+    "zh:bd8e7d83a995e4b8842f01154a5e09dbc8b417f75d54cdf10869c2909c809793",
+    "zh:c212559b5a19fdadbf9fdeeeffef8802f4a3a9f3d2dd0d8992bcc1a9ba5056a5",
+    "zh:edcaa6c3e07a324f5e9939727af40eeb0fc1a21a96f9ec38fb7e388e76e930ab",
+    "zh:faf39fb8cf7e94eb5d811d5c0d2866cc4622e8db53b866660ba4e284e14bcc6e",
   ]
 }
 
