@@ -1,9 +1,11 @@
 project_name = "simple-web-azuread-auth"
 function_app_name = "simple-web-azuread-auth-func"
 storage_account_name = "simple-web-azuread-auth-storage"
+
 subscription_id = "00000000-0000-0000-0000-000000000000"
+tenant_id = "00000000-0000-0000-0000-000000000000"
+
 client_id = "00000000-0000-0000-0000-000000000000"
 client_secret = "00000000-0000-0000-0000-000000000000"
-tenant_id = "00000000-0000-0000-0000-000000000000"
 
 base_url = "http://localhost:3000"
