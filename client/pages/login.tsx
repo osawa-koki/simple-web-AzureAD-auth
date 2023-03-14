@@ -17,9 +17,19 @@ export default function Login() {
     }
   };
 
+  const handleLogout = (logoutType) => {
+  if (logoutType === "popup") {
+    instance.logoutPopup({
+      postLogoutRedirectUri: "/",
+      mainWindowRedirectUri: "/" // redirects the top level app after logout
+    });
+  }
+}
+
   return (
     <Layout>
       <Button variant="secondary" className="ml-auto" onClick={() => handleLogin("popup")}>Sign in using Popup</Button>
+      <Button variant="secondary" className="ml-auto" onClick={() => handleLogout("popup")}>Sign out using Popup</Button>
     </Layout>
   );
 };
