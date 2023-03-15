@@ -1,7 +1,7 @@
 
 resource "azuread_application" "azuread_app" {
   display_name     = "${var.project_name}-azuread-app"
-  identifier_uris  = ["http://localhost:3000"]
+  identifier_uris  = ["${var.base_url}"]
   sign_in_audience = "AzureADMultipleOrgs"
 
   web {
