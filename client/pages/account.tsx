@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import { AuthenticatedTemplate, UnauthenticatedTemplate, useMsal } from "@azure/msal-react";
 import { loginRequest } from "../MSAD";
-import { Button } from "react-bootstrap";
+import { Alert, Button, Form } from "react-bootstrap";
 import Layout from '../components/Layout';
 
 export default function Login() {
@@ -48,20 +48,30 @@ export default function Login() {
 
   return (
     <Layout>
+      <h1>🐬 Account</h1>
       <AuthenticatedTemplate>
-        <p>You are signed in!</p>
-        <Button variant="secondary" className="ml-auto" onClick={() => handleLogout("popup")}>Sign out using Popup</Button>
-        <h5 className="card-title">Welcome {name}</h5>
+        <Alert variant="primary">You are signed in!</Alert>
+        <Button variant="danger" className="ml-auto" onClick={() => handleLogout("popup")} size="sm">Sign out using Popup</Button>
+        <h2 className="mt-3">Welcome &quot;{name}&quot;</h2>
         <div>
           {accessToken ?
-            <p>Access Token Acquired! {accessToken}</p>
+            <div className='mt-3'>
+              <p>Access Token Acquired!</p>
+              <Form.Control as="textarea" rows={5} value={accessToken.split('').map((letter: string) => {
+                if (Math.random() > 0.5) {
+                  return '*';
+                } else {
+                  return letter;
+                }
+              }).join('')} disabled />
+            </div>
             :
-            <Button variant="secondary" onClick={RequestAccessToken}>Request Access Token</Button>
+            <Button variant="info" className='mt-3' onClick={RequestAccessToken}>Request Access Token</Button>
           }
         </div>
       </AuthenticatedTemplate>
       <UnauthenticatedTemplate>
-        <p>You are not signed in! Please sign in.</p>
+        <Alert variant="warning">You are not signed in! Please sign in.</Alert>
         <Button variant="secondary" className="ml-auto" onClick={() => handleLogin("popup")}>Sign in using Popup</Button>
       </UnauthenticatedTemplate>
     </Layout>
