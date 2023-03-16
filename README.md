@@ -64,7 +64,7 @@ az ad sp create-for-rbac --name "★プリンシパル名★" --role contributor
 
 `--sdk-auth`をつけることで、`az login`でログインする際に使用するJSONが出力されます。  
 これは`Option '--sdk-auth' has been deprecated and will be removed in a future release.`という警告が出ますが、今回はこのまま使用します。  
-調べても`--sdk-auth`を使わない方法が見つからなかったので、このまま使用します。  
+※ 調べても`--sdk-auth`を使わない方法が見つからなかったため。  
 
 [参考](https://github.com/Azure/actions-workflow-samples/blob/master/assets/create-secrets-for-GitHub-workflows.md)  
 
