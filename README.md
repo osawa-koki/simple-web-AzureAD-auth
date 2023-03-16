@@ -2,6 +2,8 @@
 
 🌻🌻🌻 Azure ADを使ってみる！  
 
+![成果物](./docs/img/fruit.gif)  
+
 ## 準備
 
 以下のGitHubシークレットを設定します。  
