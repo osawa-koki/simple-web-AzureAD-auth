@@ -10,12 +10,7 @@ const pages = [
     name: 'About',
   },
   {
-    emoji: '💓',
-    path: '/contact/',
-    name: 'Contact',
-  },
-  {
-    emoji: '🦈',
+    emoji: '💖',
     path: '/account/',
     name: 'Account',
   },
