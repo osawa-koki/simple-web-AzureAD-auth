@@ -5,7 +5,7 @@ const setting = {
   isProd,
   basePath: Env.basePath,
   apiPath: isProd ? '' : 'http://localhost:8080',
-  title: '🐸 Next.js Template 🐸',
+  title: '🐸 Learning Azure AD 🐸',
   clientId: process.env.NEXT_PUBLIC_MSAL_CLIENT_ID,
   authority: process.env.NEXT_PUBLIC_MSAL_AUTHORITY,
   redirectUri: '/account',
