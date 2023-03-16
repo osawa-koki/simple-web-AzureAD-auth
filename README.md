@@ -70,6 +70,24 @@ az ad sp create-for-rbac --name "★プリンシパル名★" --role contributor
 
 このJSON全体を`AZURE_CREDENTIALS`という名前でGitHubシークレットに設定します。  
 
+---
+
+続いて必要な権限を与えます。  
+
+```shell
+az ad app permission add --id {クライアントID} --api 00000003-0000-0000-c000-000000000000 --api-permissions 1bfefb4e-e0b5-418b-a88f-73c46d2cc8e9=Role
+az ad app permission grant --id {クライアントID} --api 00000003-0000-0000-c000-000000000000
+az ad app permission admin-consent --id {クライアントID}
+```
+
+ポータルから`Azure Active Directory`を開き、`アプリの登録`を開きます。  
+`★プリンシパル名★`を検索して、クライアントIDをクリックします。  
+
+以下のように`APIのアクセス許可`に`Microsoft Graph (Application.ReadWrite.All)`が追加されていることを確認します。  
+また、規定のディレクトリに管理者の同意が与えられていることを確認します。  
+
+![APiのアクセス許可](./docs/img/api-access-auth.png)  
+
 ## 開発環境の構築
 
 ### Azure Functionsのローカル実行
