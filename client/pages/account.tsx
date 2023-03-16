@@ -40,8 +40,8 @@ export default function Login() {
   const handleLogout = (logoutType) => {
     if (logoutType === "popup") {
       instance.logoutPopup({
-        postLogoutRedirectUri: "/",
-        mainWindowRedirectUri: "/" // redirects the top level app after logout
+        postLogoutRedirectUri: "",
+        mainWindowRedirectUri: "", // redirects the top level app after logout
       });
     }
   }
