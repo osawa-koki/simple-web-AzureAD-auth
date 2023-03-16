@@ -8,6 +8,9 @@ resource "azuread_application" "azuread_app" {
   }
 
   single_page_application {
-    redirect_uris = [var.redirect_uri]
+    redirect_uris = [
+      var.redirect_uri,
+      "http://localhost:3000",
+    ]
   }
 }

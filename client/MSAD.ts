@@ -2,6 +2,7 @@
 export const msalConfig = {
   auth: {
     clientId: process.env.NEXT_PUBLIC_MSAL_CLIENT_ID, // This is the ONLY mandatory field that you need to supply.
+    redirectUri: "http://localhost:3000"
   },
   cache: {
     cacheLocation: "sessionStorage", // This configures where your cache will be stored
