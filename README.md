@@ -13,6 +13,7 @@
 | AZURE_RESOURCE_GROUP | Azure上のリソースグループ名 (`terraform.tfvars`の`project_name`) |
 | AZURE_FUNCTIONAPP_NAME | Azure上のFunction App名 (`terraform.tfvars`の`function_app_name`) |
 | AZURE_CREDENTIALS | AzureのサービスプリンシパルのJSON |
+| ENV_LOCAL | `.env.local`ファイルの中身 |
 
 ### Azure CLIのインストール
 
