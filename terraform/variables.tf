@@ -34,7 +34,7 @@ variable "tenant_id" {
   description = "The tenant ID"
 }
 
-variable "base_url" {
+variable "redirect_uri" {
   type        = string
-  description = "The base URL"
+  description = "The redirect URI"
 }
